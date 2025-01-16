@@ -24,7 +24,10 @@ echo_message "* Installed Dependencies"
 echo_message "* Installing Files"
 
 # wings
+mkdir -p wings
+cd wings
 git clone https://github.com/achul123/skyportd.git
+cd wings
 npm install
 
 echo_message "* cd skyportd"
