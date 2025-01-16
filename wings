@@ -24,10 +24,10 @@ echo_message "* Installed Dependencies"
 echo_message "* Installing Files"
 
 # wings
-mkdir -p wings
-cd wings
+mkdir -p skyportd
+cd skyportd || { echo_message "Failed to change directory to skyport"; exit 1; }
 git clone https://github.com/achul123/skyportd.git
-cd wings
+mv skyportd wings || { echo_message "Failed to change directory to panel"; exit 1; }
 npm install
 
 echo_message "* cd skyportd"
