@@ -27,10 +27,10 @@ echo_message "* Installing Files"
 mkdir -p skyportd
 cd skyportd || { echo_message "Failed to change directory to skyport"; exit 1; }
 git clone https://github.com/achul123/skyportd.git
-mv skyportd wings || { echo_message "Failed to change directory to panel"; exit 1; }
+cd skyportd || { echo_message "Failed to change directory to panel"; exit 1; }
 npm install
 
-echo_message "* cd skyportd"
+echo_message "* cd /skyportd/skyportd"
 
 echo_message "* paste your configure code"
 
