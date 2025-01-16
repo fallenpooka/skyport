@@ -74,7 +74,8 @@ npm run createUser
 
 echo_message "* Starting Skyport With PM2"
 
-# Install NODE and start the application
-node .
+# Install panel and start the application
+sudo npm install -g pm2
+pm2 start index.js
 
 echo_message "* Skyport Installed and Started on Port 3001"
