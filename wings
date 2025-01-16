@@ -54,7 +54,6 @@ echo_message "* Installed Dependencies"
 echo_message "* Installing Files"
 
 # Create directory, clone repository, and install files
-mkdir -p skyportd
 cd skyportd || { echo_message "Failed to change directory to skyport"; exit 1; }
 git clone https://github.com/achul123/skyportd.git
 cd skyportd || { echo_message "Failed to change directory to panel"; exit 1; }
