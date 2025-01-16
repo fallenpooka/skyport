@@ -20,6 +20,14 @@ CYAN='\033[0;36m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
+# Clear the screen
+clear
+# Check if the script is run as root
+if [ "$EUID" -ne 0 ]; then
+  echo -e "${RED}Please run this script as root.${NC}"
+  exit 1
+fi
+
 echo -e "${CYAN}$ascii_art${NC}"
 
 
