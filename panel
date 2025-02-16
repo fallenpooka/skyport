@@ -3,12 +3,12 @@
 # ASCII Art
 ascii_art="
 
-       _ _     _                 
-      | (_)   | |                
-      | |_ ___| |__  _ __  _   _ 
-  _   | | / __| '_ \| '_ \| | | |
- | |__| | \__ \ | | | | | | |_| |
-  \____/|_|___/_| |_|_| |_|\__,_|
+___________      .__  .__                  __________              __            
+\_   _____/____  |  | |  |   ____   ____   \______   \____   ____ |  | _______   
+ |    __) \__  \ |  | |  | _/ __ \ /    \   |     ___/  _ \ /  _ \|  |/ /\__  \  
+ |     \   / __ \|  |_|  |_\  ___/|   |  \  |    |  (  <_> |  <_> )    <  / __ \_
+ \___  /  (____  /____/____/\___  >___|  /  |____|   \____/ \____/|__|_ \(____  /
+     \/        \/               \/     \/                              \/     \/ 
                                  
 "
 
@@ -47,28 +47,28 @@ echo_message "* Installing Files"
 
 # Create directory, clone repository, and install files
 mkdir -p panel5
-cd panel5 || { echo_message "Failed to change directory to skyport"; exit 1; }
+cd panel5 || { echo_message "Failed to change directory to rec"; exit 1; }
 git clone https://github.com/achul123/panel5.git
 cd panel5 || { echo_message "Failed to change directory to panel"; exit 1; }
 npm install
 
 echo_message "* Installed Files"
 
-echo_message "* Starting Skyport"
+echo_message "* Starting Rectractyl"
 
 # Run setup scripts
 npm run seed
 npm run createUser
 
-echo_message "* Starting Skyport With PM2"
+echo_message "* Starting Rectractyl With PM2"
 
 # Install panel and start the application
 sudo npm install -g pm2
 pm2 start index.js
 
-echo_message "* Skyport Installed and Started on Port 3001"
+echo_message "* Rectractyl Installed and Started on Port 3001"
 
 
 # Clear the screen after finishing
 clear
-echo "* Made by Jishnu"
+echo "* Made by Fallen Pooka"
